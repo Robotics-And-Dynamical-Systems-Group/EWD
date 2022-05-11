@@ -281,7 +281,12 @@ struct HomeUIView: View {
                             }
                         }
                         .sheet(isPresented: $showingLFG, content: {
-                            LFG()
+                            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft{
+                                LFG()
+                            }
+                            if UIDevice.current.orientation == UIDeviceOrientation.portrait{
+                                LFG().rotationEffect(Angle(degrees: 90))
+                            }
                         })
 
                         Button(action: {
