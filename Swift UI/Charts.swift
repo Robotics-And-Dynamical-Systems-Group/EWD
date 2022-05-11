@@ -28,6 +28,7 @@ struct LFG: View {
         ZStack{
             Color.white
                 .edgesIgnoringSafeArea(.all)
+            ScrollView(.horizontal){
                 HStack{
                     Button(action: {
                         print("Sp02")
@@ -262,13 +263,13 @@ struct LFG: View {
                                             .stroke(Color.black, lineWidth: 2.0))
                         }
                     }
-                }.rotationEffect(Angle(degrees: 90))
-                .position(x: screenSize.width*0.90, y: screenSize.height*0.63)
-            
+                }
+                .position(x: screenSize.width*0.60, y: screenSize.minY+100)
+            }
             if multiLine == false {
                 
                LineViewMagnifier(data: GraphData, title: GraphTitle, style: GraphStyle2 )
-                .rotationEffect(Angle(degrees: 90))
+//                .rotationEffect(Angle(degrees: 90))
                 .frame(width: 750, height: 450)
                 .position(x: screenSize.width*0.4, y: screenSize.height*0.475)
                 .onReceive(LFGTimer, perform: {_ in self.GraphData = GraphDataUpdater(selector: GraphDataSelector)})
