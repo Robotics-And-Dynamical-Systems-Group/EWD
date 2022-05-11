@@ -33,7 +33,7 @@ struct SettingsUIView: View {
                     .position(x: screenSize.width*0.5, y: 20)
                 
                 HStack{
-                    Text("Enable Cordinated Universal Time")
+                    Text("Enable Coordinated Universal Time")
                         .foregroundColor(.black)
                         .font(SettingsFontSize2())
                     Toggle("UTC Toggle",isOn: $Settings.UTCEnabled )
