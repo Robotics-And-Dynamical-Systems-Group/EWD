@@ -126,7 +126,10 @@ struct HomeUIView: View {
 
                             }).offset(x:60)
                         }
-                        .sheet(isPresented: $showingSettings, content: {SettingsUIView()})
+                        .sheet(isPresented: $showingSettings, content: {
+                            SettingsUIView()
+                        })
+                        //.sheet(isPresented: $showingSettings, content: {SettingsUIView()})
                         //.sheet(isPresented: $showingSettings, content: {SettingsUIView(enable: $UTCEnabled, selected: $tempSelected, GsSelected: $GraphStyleSelected)})
                         HStack{
                             Text("BPM:")

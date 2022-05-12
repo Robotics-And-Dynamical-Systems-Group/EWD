@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 //            changed from new ui view to homeuiview
-            window.rootViewController = UIHostingController(rootView: HomeUIView())
+            window.rootViewController = UIHostingController(rootView: New_HomeUIView())
             self.window = window
             window.makeKeyAndVisible()
         }

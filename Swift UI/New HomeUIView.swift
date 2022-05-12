@@ -84,8 +84,6 @@ struct New_HomeUIView: View {
 
 struct New_HomeUIView_Previews: PreviewProvider {
     static var previews: some View {
-        //New_HomeUIView().previewLayout(PreviewLayout.fixed(width:896,height:414))
-        
         New_HomeUIView()
     }
 }
